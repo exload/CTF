@@ -49,3 +49,49 @@ cat data.txt | base64 -d
 11 -> 12
 
 cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+12 -> 13
+
+xxd -r data.txt /tmp/myname123/my/data
+
+file data
+
+mv data data2.bin.gz
+
+gunzip data2.bin.gz
+
+file data2.bin
+
+...
+
+13 -> 14
+
+ssh -i ./sshkey.private bandit14@localhost
+
+14 -> 15
+
+telnet localhost 30000
+
+15 -> 16
+
+openssl
+
+s_client -connect localhost:30001
+
+16 -> 17
+
+nmap -p 31000-32000 localhost
+
+openssl
+
+s_client -connect localhost:31790
+
+ssh -i %file_with_RSA_private_key% bandit17@localhost
+
+17 -> 18
+
+diff -c passwords.new passwords.old
+
+18 -> 19
+
+ssh -t bandit18@localhost cat readme
