@@ -95,3 +95,40 @@ diff -c passwords.new passwords.old
 18 -> 19
 
 ssh -t bandit18@localhost cat readme
+
+19 -> 20
+
+./bandit20-do cat ...
+
+20 -> 21
+
+tmux 
+echo ... | nc localhost -l -p 5555
+./suconnect 5555
+
+21 -> 22
+
+ls -lah /etc/cron.d
+cat /etc/cron.d/cronjob_bandit22
+ls -lah /usr/bin/...
+cat /usr/bin/...
+cat /tmp/...
+
+22 -> 23
+
+ls -lah /etc/cron.d
+cat /etc/cron.d/cronjob_bandit23
+ls -lah /usr/bin/...
+cat /usr/bin/...
+... | md5sum
+cat /tmp/...
+
+23 -> 24
+
+ls -lah /etc/cron.d
+cat /etc/cron.d/cronjob_bandit23
+ls -lah /usr/bin/...
+cat /usr/bin/...
+create bash %script% in /var/spool/bandit24 for copy password from /etc/bandit_pass/bandit24 to %file%
+do not forget to exec chmod 777 %script% and %file%
+WAIT!!!
