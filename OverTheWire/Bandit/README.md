@@ -98,7 +98,7 @@ ssh -t bandit18@localhost cat readme
 
 ### 19 -> 20
 
-./bandit20-do cat ...
+./bandit20-do cat /etc/bandit_pass/...
 
 ### 20 -> 21
 
@@ -149,3 +149,87 @@ create bash %script% in /var/spool/bandit24 for copy password from /etc/bandit_p
 do not forget to exec chmod 777 %script% and %file%
 
 WAIT!!!
+
+## 24 -> 25
+
+write bash script like this
+
+pass=...
+
+for i in {0..9}{0..9}{0..9}{0..9}
+
+do
+
+  echo $pass $i
+
+  echo $pass $i >> /tmp/my24/key.txt
+
+  echo >> /tmp/my24/key.txt
+
+  echo $pass $i | nc localhost 30002 >> /tmp/my24/key.txt
+
+done
+
+then grep /tmp/my24/key.txt
+
+## 25 -> 26
+
+cat /etc/passwd | grep bandit26
+
+resize window
+
+ssh -i bandit26.sshkey bandit26@localhost
+
+press v
+
+enter :e /etc/bandit_pass/bandit26
+
+## 26 -> 27
+
+resize window
+
+ssh -i bandit26.sshkey bandit26@localhost
+
+press v
+
+:set shell=/bin/bash
+
+:shell
+
+ls -lah
+
+./bandit27-do cat /etc/bandit_pass/...
+
+## 27 -> 28
+
+mkdir /tmp/my27; cd /tmp/my27
+
+git clone ssh://bandit27-git@localhost/home/bandit27-git/repo
+
+cat README
+
+## 28 -> 29
+
+mkdir /tmp/my28; cd /tmp/my28
+
+git clone ssh://bandit28-git@localhost/home/bandit28-git/repo
+
+git log
+
+git log -p -1
+
+## 29 -> 30
+
+mkdir /tmp/my29; cd /tmp/my29
+
+git clone ssh://bandit29-git@localhost/home/bandit29-git/repo
+
+git log
+
+git branch
+
+git branch -r
+
+git checkout %branch_name%
+
+git log -p -1
